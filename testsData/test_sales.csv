@@ -1,0 +1,7 @@
+" order_id "," DATE "," product "," region "," QUANTITY "," price "," total_sales "
+1,2024-01-10,Laptop,Norte,2,800,1600
+2,2024-01-12,Mouse,Sur,5,20,100
+3,Fecha_Invalida,Teclado,Norte,3,50,150
+4,2024-02-20,Monitor,Centro,1,300,300
+5,2024-03-02,Laptop,Sur,1,800,800
+6,2024-03-05,,Norte,2,10,20

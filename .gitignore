@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+ENV/
+.env
+
+# IDEs
+.vscode/
+.idea/
+
+# Data
+data/*.csv
+data/*.xlsx
+data/*.xls
+!data/sales.csv
+
+# Reports
+testsprite_tests/reports/
