@@ -1,0 +1,52 @@
+[
+  {
+    "id": "TC001",
+    "title": "detect_numeric_columns",
+    "description": "Test detect_numeric() with DataFrame containing mixed column types to verify it returns correct list of numeric columns and returns empty list for empty DataFrame."
+  },
+  {
+    "id": "TC002",
+    "title": "detect_categorical_columns",
+    "description": "Test detect_categorical() with DataFrame containing mixed column types to verify it returns correct list of categorical (object/string) columns."
+  },
+  {
+    "id": "TC003",
+    "title": "detect_datetime_columns",
+    "description": "Test detect_datetime() with DataFrame containing datetime columns to verify it returns correct list of datetime columns."
+  },
+  {
+    "id": "TC004",
+    "title": "dataset_summary_complete",
+    "description": "Test dataset_summary() with a DataFrame to verify it returns a dictionary with keys 'numeric', 'categorical', and 'datetime' containing respective column lists."
+  },
+  {
+    "id": "TC005",
+    "title": "load_csv_file",
+    "description": "Test load_csv() with valid CSV file path to verify it returns a pandas DataFrame and with invalid path to verify it raises FileNotFoundError with Spanish error message."
+  },
+  {
+    "id": "TC006",
+    "title": "load_excel_file",
+    "description": "Test load_excel() with valid Excel file path to verify it returns a pandas DataFrame."
+  },
+  {
+    "id": "TC007",
+    "title": "preview_loaded_data",
+    "description": "Test preview_data() with loaded DataFrame to verify it returns first 5 rows by default and first N rows when rows parameter is specified."
+  },
+  {
+    "id": "TC008",
+    "title": "get_loaded_dataframe",
+    "description": "Test get_dataframe() after loading a file to verify it returns the currently loaded DataFrame."
+  },
+  {
+    "id": "TC009",
+    "title": "export_data_to_csv",
+    "description": "Test to_csv() with a DataFrame to verify it returns CSV bytes encoded in UTF-8 without DataFrame index."
+  },
+  {
+    "id": "TC010",
+    "title": "generate_text_summary_report",
+    "description": "Test to_summary_text() with DataFrame containing all expected columns to verify it returns formatted text report and with missing columns to verify it generates partial report."
+  }
+]

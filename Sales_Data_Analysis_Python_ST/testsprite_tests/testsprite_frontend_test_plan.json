@@ -1,0 +1,355 @@
+[
+  {
+    "id": "TC001",
+    "title": "View default dashboard with initial dataset",
+    "description": "Verifies the dashboard loads with the default dataset and initial visualizations render without any user interaction.",
+    "category": "Dashboard - View Sales Data",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the dashboard to finish loading"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify sales charts are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a sales data table is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Filter dashboard by one region and one product",
+    "description": "Verifies selecting one region and one product updates charts and tables to reflect the filtered dataset consistently.",
+    "category": "Dashboard - View Sales Data",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the dashboard to finish loading"
+      },
+      {
+        "type": "action",
+        "description": "Select a single option in the region multiselect"
+      },
+      {
+        "type": "action",
+        "description": "Select a single option in the product multiselect"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify sales charts reflect the current region and product selections"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the sales table reflects the current region and product selections"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "Saved preset persists after app reload",
+    "description": "Verifies a saved preset remains available after reloading the app and can be loaded to restore the previously saved filter set.",
+    "category": "Create Custom Filters",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the dashboard to finish loading"
+      },
+      {
+        "type": "action",
+        "description": "Select multiple options in the region multiselect"
+      },
+      {
+        "type": "action",
+        "description": "Select multiple options in the product multiselect"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"Preset Persist\" into the configuration name field"
+      },
+      {
+        "type": "action",
+        "description": "Click the save configuration control"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the dashboard to finish loading"
+      },
+      {
+        "type": "action",
+        "description": "Select the saved preset \"Preset Persist\" from the preset selection control"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the region and product selections are restored to match the preset"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify sales charts reflect the restored preset selections"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "Save a new filter preset successfully",
+    "description": "Verifies a user can save the current region/product selections as a named preset and sees the Spanish success confirmation.",
+    "category": "Create Custom Filters",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the dashboard to finish loading"
+      },
+      {
+        "type": "action",
+        "description": "Select a single option in the region multiselect"
+      },
+      {
+        "type": "action",
+        "description": "Select a single option in the product multiselect"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"Preset A\" into the configuration name field"
+      },
+      {
+        "type": "action",
+        "description": "Click the save configuration control"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a success confirmation is visible with the text \"Configuración 'Preset A' guardada.\""
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC005",
+    "title": "Filter dashboard by multiple regions and products",
+    "description": "Verifies multi-selecting multiple regions and multiple products updates all visualizations and the table without desynchronization.",
+    "category": "Dashboard - View Sales Data",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the dashboard to finish loading"
+      },
+      {
+        "type": "action",
+        "description": "Select multiple options in the region multiselect"
+      },
+      {
+        "type": "action",
+        "description": "Select multiple options in the product multiselect"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify sales charts reflect the combined multi-region and multi-product selections"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the sales table reflects the combined multi-region and multi-product selections"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC006",
+    "title": "Rapidly change filters keeps dashboard in sync",
+    "description": "Verifies repeatedly changing region/product selections keeps charts and tables responsive and synchronized with the latest selections.",
+    "category": "Dashboard - View Sales Data",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the dashboard to finish loading"
+      },
+      {
+        "type": "action",
+        "description": "Select a single option in the region multiselect"
+      },
+      {
+        "type": "action",
+        "description": "Select a single option in the product multiselect"
+      },
+      {
+        "type": "action",
+        "description": "Change the region selection to a different option"
+      },
+      {
+        "type": "action",
+        "description": "Change the product selection to a different option"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify all sales charts reflect the latest selections"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the sales table reflects the latest selections"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC007",
+    "title": "Clear filters returns to default view semantics",
+    "description": "Verifies clearing region and product selections returns the dashboard to the default (unfiltered) view as designed.",
+    "category": "Dashboard - View Sales Data",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the dashboard to finish loading"
+      },
+      {
+        "type": "action",
+        "description": "Select a single option in the region multiselect"
+      },
+      {
+        "type": "action",
+        "description": "Select a single option in the product multiselect"
+      },
+      {
+        "type": "action",
+        "description": "Clear all selections in the region multiselect"
+      },
+      {
+        "type": "action",
+        "description": "Clear all selections in the product multiselect"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify sales charts match the default unfiltered view"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the sales table matches the default unfiltered view"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC008",
+    "title": "Prevent saving preset with duplicate name",
+    "description": "Verifies saving a preset name that already exists is prevented or results in clear feedback without creating a second conflicting preset.",
+    "category": "Create Custom Filters",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the dashboard to finish loading"
+      },
+      {
+        "type": "action",
+        "description": "Select a single option in the region multiselect"
+      },
+      {
+        "type": "action",
+        "description": "Select a single option in the product multiselect"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"Preset Duplicate\" into the configuration name field"
+      },
+      {
+        "type": "action",
+        "description": "Click the save configuration control"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"Preset Duplicate\" into the configuration name field"
+      },
+      {
+        "type": "action",
+        "description": "Click the save configuration control"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a validation or error message is visible for the duplicate name"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify only one preset entry exists for the name \"Preset Duplicate\" in the preset selection control"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC009",
+    "title": "Prevent saving preset with blank name",
+    "description": "Verifies attempting to save a preset with an empty or whitespace-only name is blocked with clear feedback and no success confirmation.",
+    "category": "Create Custom Filters",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to /"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the dashboard to finish loading"
+      },
+      {
+        "type": "action",
+        "description": "Select a single option in the region multiselect"
+      },
+      {
+        "type": "action",
+        "description": "Select a single option in the product multiselect"
+      },
+      {
+        "type": "action",
+        "description": "Fill \"   \" into the configuration name field"
+      },
+      {
+        "type": "action",
+        "description": "Click the save configuration control"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a validation or error message is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify no success confirmation is visible"
+      }
+    ],
+    "priority": "Low"
+  }
+]

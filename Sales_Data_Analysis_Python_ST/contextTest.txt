@@ -1,0 +1,49 @@
+Rol: "Actúa como un QA Engineer especializado en Python y Pytest usa la tecnica de whiteBox testing para crear las pruebas indicadas".
+
+#Stack de librerias
+- Pytest
+- Pandas Testing
+- Numpy Testing
+- Scikit-learn Testing
+- coverage.py 
+
+#Estructura del archivo de pruebas
+tests/             
+│   ├── __init__.py
+│   ├── test_data_cleaner.py
+│   ├── test_sales_analyzer.py
+│   └── test_auto_ml.py
+
+Tarea: "Genera el código de pruebas para las clases especificadas
+Restricciones: "Usa un entorno virtual de Python (venv) y asegúrate de que las pruebas cubran tanto el flujo básico como el alternativo".
+
+#Clases a probar
+Módulo: Limpieza y Preparación de Datos (data_cleaner.py)
+Caso de Prueba: Normalización de Columnas
+Descripción: Cargar un CSV con nombres de columnas en mayúsculas y con espacios (ej. "PRECIO VENTA ").
+Resultado Esperado: El sistema convierte los nombres a minúsculas y elimina espacios adicionales automáticamente.
+
+Módulo: Limpieza y Preparación de Datos (data_cleaner.py)
+Caso de Prueba: Manejo de Fechas Inválidas
+Descripción: Cargar un dataset donde la columna "date" tiene formatos inconsistentes o texto no relacionado.
+Resultado Esperado: El sistema detecta el error de formato y notifica al usuario que no pudo convertir la columna a tipo temporal.
+
+Módulo: Análisis Exploratorio Automático (eda_analyzer.py)
+Caso de Prueba: Cálculo de Estadísticas Descriptivas
+Descripción: Procesar un dataset numérico estándar para obtener media, desviación y percentiles
+Resultado Esperado: Los valores calculados coinciden con los resultados de la librería Pandas para ese conjunto de datos.
+
+Módulo: Análisis Exploratorio Automático (eda_analyzer.py)
+Caso de Prueba: Detección de Dataset con una Sola Variable
+Descripción: Cargar un archivo que solo contiene una columna de datos.
+Resultado Esperado: El sistema informa que no es posible realizar un análisis de correlación por falta de variables adicionales.
+
+Módulo: Machine Learning (auto_ml.py)
+Caso de Prueba: Entrenamiento Exitoso de Regresión
+Descripción: Seleccionar "order_id" como objetivo y "quantity" como predictora con datos suficientes.
+Resultado Esperado: El sistema genera el modelo y muestra métricas de desempeño como MAE y R2.
+
+Módulo: Machine Learning (auto_ml.py)
+Caso de Prueba: Datos Insuficientes para Entrenamiento
+Descripción: Intentar entrenar un modelo con un dataset de menos de 2 registros.
+Resultado Esperado: El sistema muestra un mensaje de error indicando que se requieren más datos para el entrenamiento.

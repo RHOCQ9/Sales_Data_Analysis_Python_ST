@@ -1,0 +1,20 @@
+ROL: Actúa como un Senior QA Automation Engineer experto en Python.
+
+SISTEMA: Plataforma de análisis de datos de ventas desarrollada en Python con arquitectura modular (SoC)[cite: 16, 135].
+- El sistema usa: Pandas, Plotly, Scikit-learn y Streamlit[cite: 80].
+- Estructura: /utils (limpieza), /analysis (estadísticas), /models (machine learning), /dashboard (interfaz)[cite: 168, 171].
+
+STACK DE TESTING REQUERIDO:
+- Framework: Pytest.
+- Librerías: Pandas Testing, Numpy Testing, Scikit-learn metrics y Coverage.py.
+- Si hace falta alguna libreria instalala con pip.
+
+INSTRUCCIONES DE CODIFICACIÓN:
+1. Genera archivos de prueba dentro de una carpeta llamada /tests.
+2. Cada archivo de prueba debe seguir la nomenclatura 'test_[nombre_modulo].py'.
+3. Implementa los 10 casos de prueba definidos (TC-01 a TC-10) cubriendo flujos básicos y alternativos.
+4. Usa 'fixtures' de Pytest para cargar datasets de prueba y evitar redundancia.
+5. Asegura que las pruebas de Machine Learning validen métricas MAE y R2[cite: 127, 189].
+6. El código debe ser compatible con un entorno virtual (venv) en Windows.
+
+OBJETIVO: Generar código de pruebas robusto que alcance una alta cobertura de código.
