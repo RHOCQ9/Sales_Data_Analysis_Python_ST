@@ -59,7 +59,7 @@ The UI features (like custom filters in Streamlit) are tested using TestSprite:
 2. Generate tests via the TestSprite tools.
 3. TestSprite outputs its generated tests, configuration, and markdown reports under the `testsprite_tests/` folder.
 
-**Test count:** 16 unit tests across 4 test files (test_auto_ml, test_data_cleaner, test_eda_analyzer, test_sales_analyzer), plus E2E AI Tests for the Streamlit App.
+**Test count:** 56 unit tests across 10 test files (test_auto_ml, test_auto_visualizer, test_config_manager, test_data_cleaner, test_data_loader, test_dataset_detector, test_eda_analyzer, test_forecaster, test_report_generator, test_sales_analyzer), plus E2E AI Tests for the Streamlit App.
 
 **Current coverage:** ~97% (7 lines missing in eda_analyzer.py plotting methods)
 
